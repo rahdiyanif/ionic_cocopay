@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>CocoPAY</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="notifications" class="badge-container">
+          <!--<span class="custom-badge">3</span>-->
+        </ion-icon>
+      </button>
+      <button ion-button icon-only (click)="goOptions()">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  
+</ion-header>
+
+<ion-content>
+  <div padding>
+    <ion-segment [(ngModel)]="listofdebt">
+      <ion-segment-button value="spender">You Owes Who</ion-segment-button>
+      <ion-segment-button value="lender">Who Owes You</ion-segment-button>
+    </ion-segment>
+  </div>
+        
+  <div [ngSwitch]="listofdebt">
+    <ion-list *ngSwitchCase="'spender'">
+      <button ion-item (click)="goSeeDetails()">
+          <p style="text-align:left;">
+            You owe Catherine
+            <span style="float:right;">Rp 150,000</span>
+          </p>  
+      </button>
+      <button ion-item (click)="goSeeDetails()">
+          <p style="text-align:left;">
+            You owe Helen
+            <span style="float:right;">Rp 100,000</span>
+          </p>  
+      </button>
+    </ion-list>
+  </div>
+        
+  <div [ngSwitch]="listofdebt">
+    <ion-list *ngSwitchCase="'lender'">
+      <button ion-item (click)="goSeeDetails()">
+        <p style="text-align:left;">
+          Catherine Owes You
+          <span style="float:right;">Rp 50,000</span>
+        </p>  
+      </button>
+      <button ion-item (click)="goSeeDetails()">
+        <p style="text-align:left;">
+          Helen Owes You
+          <span style="float:right;">Rp 250,000</span>
+        </p>  
+      </button>
+    </ion-list>
+  </div>
+</ion-content>
