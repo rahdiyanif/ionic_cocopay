@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-
-import { ProfilePage } from '../profile/profile';
-import { CocoPage } from '../coco/coco';
+import { NavController, PopoverController } from 'ionic-angular';
 import { OptionsPage } from '../options/options';
 
 @Component({
@@ -11,14 +8,16 @@ import { OptionsPage } from '../options/options';
 })
 export class HomePage {
   
-  constructor(public navCtrl: NavController) {
+  constructor(public popoverCtrl: PopoverController) {
 
   }
   
-  goOptions() {
-    this.navCtrl.push(OptionsPage, {});
+  goOptions (myEvent){
+    let popover = this.popoverCtrl.create(OptionsPage);
+    popover.present({
+      ev : myEvent
+    });
   }
-
   /**
   constructor(public navCtrl: NavController) {
 
