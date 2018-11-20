@@ -7,11 +7,6 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-buttons start left>
-      <button ion-button icon-only (click)="dismiss()">
-        <ion-icon name="arrow-back"></ion-icon>
-      </button>
-    </ion-buttons>
     <ion-title>Edit Profile</ion-title>
 
     <ion-buttons end>
@@ -33,25 +28,23 @@
   </div>
 
   <!-- Form -->
-  <ion-item>
-    <ion-label> 
-      <ion-icon name="person" color="gray">Full Name</ion-icon>
-    </ion-label>
-    <ion-input type="text" [value]="user_data.name"></ion-input>
-  </ion-item>
+  <ion-list>
 
     <ion-item>
-    <ion-label> 
-      <ion-icon name="mail" color="gray">E-Mail</ion-icon>
-    </ion-label>
-    <ion-input type="text" [value]="user_data.email"></ion-input>
-  </ion-item>
+      <ion-label stacked>Full Name</ion-label>
+      <ion-input type = "text" [value] = "user_data.name"></ion-input>
+    </ion-item>
 
-  <ion-item>
-    <ion-label>
-      <ion-icon name="key" color="gray">Password</ion-icon>
-    </ion-label>
-    <ion-textarea placeholder="" [value]="user_data.password"></ion-textarea>
-  </ion-item>
+    <ion-item>
+        <ion-label stacked>E-Mail</ion-label>
+        <ion-input type = "text" [value] = "user_data.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Password</ion-label>
+        <ion-input type = "password" [value] = "user_data.password"></ion-input>
+    </ion-item>
+  
+  </ion-list>
 
 </ion-content>

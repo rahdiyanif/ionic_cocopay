@@ -1,14 +1,20 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { IonicApp, IonicModule, IonicErrorHandler, PopoverController } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
+import { TabsPage } from '../pages/tabs/tabs';
+import { HomePage } from '../pages/home/home';
+import { CocoPage } from '../pages/coco/coco';
 import { ProfilePage } from '../pages/profile/profile';
 import { EditProfilePage } from '../pages/edit-profile/edit-profile';
-import { HomePage } from '../pages/home/home';
-import { TabsPage } from '../pages/tabs/tabs';
-import { OptionsPage } from '../pages/options/options';
+
+import { SettingsPage } from '../pages/settings/settings';
+import { HelpPage } from '../pages/help/help';
+import { AboutPage } from '../pages/about/about';
+
+import { OptHomePage } from '../pages/opt-home/opt-home';
+import { OptProfilePage } from '../pages/opt-profile/opt-profile';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,12 +22,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ProfilePage,
-	EditProfilePage
-    HomePage,
     TabsPage,
-	OptionsPage	
+    HomePage,
+    CocoPage,
+    ProfilePage,
+    EditProfilePage,
+    OptHomePage,
+    OptProfilePage,
+    SettingsPage,
+    HelpPage,
+    AboutPage	
   ],
   imports: [
     BrowserModule,
@@ -30,12 +40,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ProfilePage,
-	EditProfilePage
-    HomePage,
     TabsPage,
-	OptionsPage	
+    HomePage,
+    CocoPage,
+    ProfilePage,
+    EditProfilePage,
+    OptHomePage,
+    OptProfilePage,
+    SettingsPage,
+    HelpPage,
+    AboutPage	
   ],
   providers: [
     StatusBar,

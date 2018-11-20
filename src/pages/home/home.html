@@ -26,7 +26,7 @@
         
   <div [ngSwitch]="listofdebt">
     <ion-list *ngSwitchCase="'spender'">
-      <button ion-item (click)="goSeeDetails()">
+      <button ion-item (click)="goSeeSpenderDetails()">
           <p style="text-align:left;">
             You owe Catherine
             <span style="float:right;">Rp 150,000</span>
@@ -43,7 +43,7 @@
         
   <div [ngSwitch]="listofdebt">
     <ion-list *ngSwitchCase="'lender'">
-      <button ion-item (click)="goSeeDetails()">
+      <button ion-item (click)="goSeeLenderDetails()">
         <p style="text-align:left;">
           Catherine Owes You
           <span style="float:right;">Rp 50,000</span>
